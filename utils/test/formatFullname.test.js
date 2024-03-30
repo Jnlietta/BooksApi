@@ -16,4 +16,8 @@ describe('FormatFullname', () => {
         expect(formatFullname('John Doe Test')).to.equal('Error');
         expect(formatFullname('John')).to.equal('Error');
     });
+    it('should return formated string with proper upper and lower case letters', () => {
+        expect(formatFullname('JoHn DoE')).to.equal('John Doe');
+        expect(formatFullname('amanda dOE')).to.equal('Amanda Doe');
+    })
 });
